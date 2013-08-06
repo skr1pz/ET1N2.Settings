@@ -7,8 +7,13 @@
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
- 
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera"/>
+    <!--  <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
+    <uses-permission android:name="android.permission.RAISED_THREAD_PRIORITY"/>-->
+    
     
     <uses-sdk
         android:minSdkVersion="10"
@@ -19,16 +24,25 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme"
+        android:persistent="true" >
         <activity
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:name="com.et1n2.settings.MainActivity"
             android:label="@string/app_name" >
+            
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            
+            <!--  <reciever android:name=".SmsReceiver"> 
+                <intent-filter android:priority="999999">
+                    <action android:name="android.provider.Telephony.SMS_RECIVED" />
+                </intent-filter>
+            </reciever>-->
+            
+        
         </activity>
     </application>
 
