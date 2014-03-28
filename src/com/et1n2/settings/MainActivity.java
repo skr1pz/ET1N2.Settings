@@ -47,7 +47,8 @@ public class MainActivity extends Activity
 		//android.telephony.TelephonyManager.NETWORK_TYPE_EVDO_A;
 		//Telephony.TelephonyManager(getContentResolver(), TelephonyManager.NETWORK_TYPE_EVDO_A);
 		//android.hardware.Camera.Parameters.set(getContentResolver(), Camera.Parameters.this.setPictureSize(1600, 1200);
-        
+		android.provider.Settings.System.putInt(getContentResolver(), Settings.Global.AUTO_TIME, 1);
+
 		
 		
 		//The below code sets camera sucessfully but not persistenly 
